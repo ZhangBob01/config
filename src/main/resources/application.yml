@@ -1,0 +1,26 @@
+###服务名，端口号
+spring:
+  application:
+    name: app-bob-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ZhangBob01/config-repo
+          username: zhangbob01
+          password: 521wueryi
+          basedir: /Users/toudaizhi/IdeaProjects/localhostgit
+server:
+  port: 7001
+
+###Eureka注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+
+
+###统一配置会加载并合并不带环境后缀的文件，例如app-bob-order.yml中的配置合并到app-bob-order-dev.yml;
+
+
+
